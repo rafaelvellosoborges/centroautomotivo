@@ -1,0 +1,48 @@
+{
+  "company": {
+    "name": "Centro Automotivo Desembargador",
+    "rating": 4.7,
+    "reviewCount": 140,
+    "address": "R. Cel. Gomes Nogueira, 426 - Centro, Taubaté - SP",
+    "phone": "(12) 3413-9743"
+  },
+  "services": [
+    {
+      "title": "Diagnóstico Avançado",
+      "icon": "cpu",
+      "description": "Identificação precisa de falhas através de scanners de última geração, eliminando suposições."
+    },
+    {
+      "title": "Mecânica Performance",
+      "icon": "settings",
+      "description": "Intervenções em motor e transmissão com precisão cirúrgica e peças de padrão original."
+    },
+    {
+      "title": "Suspensão e Direção",
+      "icon": "activity",
+      "description": "Revisão completa do sistema para garantir estabilidade absoluta e conforto."
+    },
+    {
+      "title": "Sistemas de Freios",
+      "icon": "shield-alert",
+      "description": "Manutenção rigorosa em discos, pastilhas e ABS, priorizando a segurança máxima."
+    },
+    {
+      "title": "Ar-Condicionado",
+      "icon": "wind",
+      "description": "Limpeza, recarga de gás e manutenção do sistema para o seu conforto térmico."
+    },
+    {
+      "title": "Revisão Preventiva",
+      "icon": "check-square",
+      "description": "Protocolo rigoroso de verificação de itens vitais, preservando o valor do seu veículo."
+    }
+  ],
+  "diferenciais": [
+    { "text": "Atendimento Honesto", "icon": "check" },
+    { "text": "Profissionais Qualificados", "icon": "users" },
+    { "text": "Equipamentos Modernos", "icon": "laptop" },
+    { "text": "Transparência no Orçamento", "icon": "file-text" },
+    { "text": "Rapidez no Serviço", "icon": "zap" }
+  ]
+}

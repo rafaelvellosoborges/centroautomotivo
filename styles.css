@@ -1,0 +1,143 @@
+:root {
+    --accent-red: #dc2626;
+    --dark-bg: #09090b;
+    --zinc-900: #18181b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+}
+
+h1, h2, h3, h4, .font-syncopate {
+    font-family: 'Syncopate', sans-serif;
+}
+
+/* Luxury Grid Overlay */
+.bg-grid {
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Nav Bar Refinement */
+.nav-scrolled {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(9, 9, 11, 0.95);
+    border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent-red);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Service Card Live Feel */
+.service-card {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.4s ease, 
+                background-color 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(220, 38, 38, 0.4);
+    background-color: var(--zinc-900);
+}
+
+/* Card Glow Effect */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(220, 38, 38, 0.08) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Google Review Card Style */
+#reviews-container > div {
+    position: relative;
+}
+
+#reviews-container > div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-red), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#reviews-container > div:hover::after {
+    opacity: 1;
+}
+
+/* WhatsApp Animation */
+#whatsapp-btn:hover i {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border: 2px solid #09090b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-red);
+}
+
+/* Smooth Map Filter */
+iframe {
+    transition: filter 0.5s ease;
+}
+
+.group:hover iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(1) contrast(1.1) !important;
+}
+
+/* Reveal Text Animation */
+.reveal-text {
+    overflow: hidden;
+}
+
+/* Performance optimizations */
+.animate-on-scroll {
+    will-change: transform, opacity;
+}
